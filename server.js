@@ -141,7 +141,7 @@ app.post( '/bookmarks' , jsonParser, ( req, res ) => {
 
     //We must recieve all parts of the object.
     if (!title || !description || !url || !rating){
-        res.statusMessage = "One of these parameters is missing in the request: 'id' 'title' 'description' 'url' 'rating'.";
+        res.statusMessage = "One of these parameters is missing in the request: 'title' 'description' 'url' 'rating'.";
         return res.status( 406 ).end();
     }
 
@@ -161,6 +161,7 @@ app.post( '/bookmarks' , jsonParser, ( req, res ) => {
             break;
         }
     }
+    
     
     if ( flag ){
         //Add bookmark to list
