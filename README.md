@@ -1,3 +1,3 @@
 <h1>
-This repository's purpose is to create a server side API that supports GET, POST, DELETE And PATCH that now works with mongoose.
+This repository's purpose is to create both the server and client side of a bookmark application, and deploy it.
 </h1>
