@@ -10,7 +10,7 @@ function validateAPIKEY( req, res, next ){
     //Get apikey
     let ApiKey = req.query.apiKey;
 
-    console.log(API_KEY);
+    //console.log(API_KEY);
 
     if ( !ApiKey ){
         ApiKey = req.headers.authorization;
