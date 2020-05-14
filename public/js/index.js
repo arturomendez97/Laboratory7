@@ -252,7 +252,7 @@ function watchModifyBookmarkForm(){
         }
 
         if(rating){
-            body.rating = rating;
+            body.rating = Number( rating );
         }
 
         fetchModifyBookmark( id, body );
