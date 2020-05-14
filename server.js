@@ -17,7 +17,11 @@ const validateAPIKEY = require( './middleware/validateAPIKEY');
 const mongoose = require( 'mongoose' );
 //Importar el objeto de la colección
 const { Bookmarks } = require( './models/bookmarkModel' );
+//Importar config.js
+const {DATABASE_URL, PORT} = require( './config' );
 
+//Conectar con html
+app.use( express.static( 'public' ) );
 
 //Execute a middleware in all endpoints.
 //Dev is the environment.
@@ -246,7 +250,7 @@ Bookmarks
             return res.status( 404 ).end()
         }
         else{
-            return res.status( 200 ).end();
+            return res.status( 200 ).json( result );
         }
     })
     .catch( err => {
@@ -373,7 +377,7 @@ app.patch( '/bookmark/:id', jsonParser, ( req, res ) => {
 //To listen actively
 // 8080= port number for running locally
 //Second parameter = function
-app.listen( 8080, () => {
+app.listen( PORT, () => {
     console.log("this server is running on port 8080");
 
     new Promise( ( resolve, reject ) => {
@@ -386,7 +390,7 @@ app.listen( 8080, () => {
             //mongo le da a los objetos
             useCreateIndex: true
         };
-        mongoose.connect( 'mongodb://localhost/bookmarksdb', settings, ( err ) => {
+        mongoose.connect( DATABASE_URL, settings, ( err ) => {
             if( err ){
                 return reject( err );
             }

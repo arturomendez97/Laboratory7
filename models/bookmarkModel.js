@@ -67,7 +67,7 @@ const Bookmarks = {
     },
     removeBookmarkbyID : function( bookmarkID ){
         return bookmarkCollection
-                .remove({id: bookmarkID})
+                .deleteOne({id: bookmarkID})
                 .then( BookmarkDeleted => {
                     return BookmarkDeleted;
                 })

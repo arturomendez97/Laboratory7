@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+    <title>
+      Bookmarks APP
+    </title>
+    <link href = "./css/index.css" rel = "stylesheet" type = "text/css" />
+  </head>
+  <body>
+    <h1>Bookmarks App</h1>
+    
+    <form class = "form-get-bookmarks">
+        <label>
+            Click on the button to retrieve the list of bookmarks
+        </label>
+        <button type="submit" id="get-bookmarks">
+            Retrieve Bookmarks
+        </button>
+    </form>
+
+    <h2>Add Bookmark:</h2>
+    <form class = "form-add-bookmark">
+        
+        <label for="bookmarkTitleAdd">
+            Title : 
+        </label>
+        <input type="text" id="bookmarkTitleAdd">
+
+        <label for="bookmarkDescriptionAdd">
+            Description : 
+        </label>
+        <input type="text" id="bookmarkDescriptionAdd">
+
+        <label for="bookmarkUrlAdd">
+            Url : 
+        </label>
+        <input type="text" id="bookmarkUrlAdd">
+
+        <label for="bookmarkRatingAdd">
+            Rating : 
+        </label>
+        <input type="number" id="bookmarkRatingAdd">
+
+        <button type="submit">
+            add Bookmark
+        </button>
+    </form>
+
+    <h2> Delete Bookmark: </h2>
+    <form class = "form-delete-bookmark">
+        <label for="bookmarkIdDel">
+            id : 
+        </label>
+        <input type="text" id="bookmarkIdDel">
+
+        <button type="submit">
+            Delete Bookmark
+        </button>
+    </form>
+
+    <h2>Modify Bookmark:</h2>
+    <form class = "form-modify-bookmark">
+
+        <label for="bookmarkIdMod">
+            Id : 
+        </label>
+        <input type="text" id="bookmarkIdMod">
+        
+        <label for="bookmarkTitleMod">
+            Title : 
+        </label>
+        <input type="text" id="bookmarkTitleMod">
+
+        <label for="bookmarkDescriptionMod">
+            Description : 
+        </label>
+        <input type="text" id="bookmarkDescriptionMod">
+
+        <label for="bookmarkUrlMod">
+            Url : 
+        </label>
+        <input type="text" id="bookmarkUrlMod">
+
+        <label for="bookmarkRatingMod">
+            Rating : 
+        </label>
+        <input type="number" id="bookmarkRatingMod">
+
+        <button type="submit">
+            Modify Bookmark
+        </button>
+    </form>
+
+    <h2> Get Bookmark by Title: </h2>
+    <form class = "form-getbytitle-bookmark">
+        <label for="bookmarkTitleGet">
+            Title : 
+        </label>
+        <input type="text" id="bookmarkTitleGet">
+
+        <button type="submit">
+            Get Bookmark
+        </button>
+    </form>
+
+    <h3>Bookmarks:</h3>
+    <div class="results">
+
+    </div>
+    <script src ="./js/index.js" type = "text/javascript"></script>
+  </body>
+</html>
