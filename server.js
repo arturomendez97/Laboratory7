@@ -13,6 +13,8 @@ const app = express();
 const uuid = require( 'uuid');
 //Import middleware function validateAPIKEY
 const validateAPIKEY = require( './middleware/validateAPIKEY');
+//Cors
+const cors = require( './middleware/cors' );
 //Importar mongoose
 const mongoose = require( 'mongoose' );
 //Importar el objeto de la colección
@@ -20,6 +22,7 @@ const { Bookmarks } = require( './models/bookmarkModel' );
 //Importar config.js
 const {DATABASE_URL, PORT} = require( './config' );
 
+app.use( cors );
 //Conectar con html
 app.use( express.static( 'public' ) );
 
