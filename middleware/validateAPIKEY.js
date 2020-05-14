@@ -1,5 +1,6 @@
 //API_KEY
-const API_KEY = '2abbf7c3-245b-404f-9473-ade729ed4653';
+//const API_KEY = '2abbf7c3-245b-404f-9473-ade729ed4653';
+const {TOKEN} = require( './../config' );
 
 //Middleware function
 function validateAPIKEY( req, res, next ){
@@ -24,7 +25,7 @@ function validateAPIKEY( req, res, next ){
         return res.status ( 401 ).end();
     }
 
-    if( ApiKey != `Bearer ${API_KEY}` && ApiKey != `${API_KEY}`)
+    if( ApiKey != `Bearer ${TOKEN}` && ApiKey != `${TOKEN}`)
     {
         res.statusMessage = "Unauthorized. ApiKey is incorrect."
         return res.status ( 401 ).end();
